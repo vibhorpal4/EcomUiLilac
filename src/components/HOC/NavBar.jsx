@@ -29,7 +29,7 @@ const NavBar = () => {
   );
 };
 
-const Container = styled.div`
+const Container = styled.nav`
   width: 1920px;
   height: 61px;
   background-color: ${({ theme }) => theme.secondaryBackgroundColor};

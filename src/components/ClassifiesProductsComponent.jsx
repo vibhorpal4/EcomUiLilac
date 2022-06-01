@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { Navigation } from "swiper";
+import { Autoplay, Navigation } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import {
   MdOutlineLocationOn,
@@ -9,6 +9,8 @@ import {
 } from "react-icons/md";
 
 import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/autoplay";
 import "swiper/css/navigation";
 
 const ClassifiesProductsComponent = () => {
@@ -46,8 +48,17 @@ const ClassifiesProductsComponent = () => {
           Explore <MdChevronRight size={25} />
         </ExploreButton>
       </LeftContainer>
-      <Slider modules={[Navigation]} speed={800} slidesPerView={4} loop={true}>
-        <CustomSlide>
+      <Slider
+        modules={[Autoplay]}
+        loop
+        slidesPerView={4}
+        autoplay={{
+          delay: 3000,
+          disableOnInteraction: true,
+        }}
+        speed={3000}
+      >
+        <SwiperSlide>
           <Card
             image={
               "https://s3-alpha-sig.figma.com/img/1f26/3dde/7b3c79a7ef682b1b875eb1700fa4da21?Expires=1655078400&Signature=NL03V7-kq969qe5x1WuYdE5UFSCj3csQsF1y-mpuxabjRl83SQj-pZ4qgEU10P2ZytJPdff9oHrsial74QBak0KWfieutOlmxFLp0miMPzGqtKAF5ST1si9b1helZfgnoN7oETHp7U7lnVTlTfynLN3UJKuf42PZ4Ik3Mst3nLEWOC1mN9iZu7dHSFsJ93N-CHsvza9sWzNdM1tYI-8vMK~RMphtWWeDgUEg9vxTqyuCVSaLFxUGE~aHM6fIDc6741pIx1GvOtKBRR2RnvvsLCw5-prpkfWQYdW98JNVXa5rwiNPn0exARnNO4DstTTFfbUEYbQAcuhg9KDzmlTHDw__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA"
@@ -57,8 +68,8 @@ const ClassifiesProductsComponent = () => {
             price="300.98"
             location="Cape Hadstone"
           />
-        </CustomSlide>
-        <CustomSlide>
+        </SwiperSlide>
+        <SwiperSlide>
           <Card
             image={
               "https://s3-alpha-sig.figma.com/img/1f26/3dde/7b3c79a7ef682b1b875eb1700fa4da21?Expires=1655078400&Signature=NL03V7-kq969qe5x1WuYdE5UFSCj3csQsF1y-mpuxabjRl83SQj-pZ4qgEU10P2ZytJPdff9oHrsial74QBak0KWfieutOlmxFLp0miMPzGqtKAF5ST1si9b1helZfgnoN7oETHp7U7lnVTlTfynLN3UJKuf42PZ4Ik3Mst3nLEWOC1mN9iZu7dHSFsJ93N-CHsvza9sWzNdM1tYI-8vMK~RMphtWWeDgUEg9vxTqyuCVSaLFxUGE~aHM6fIDc6741pIx1GvOtKBRR2RnvvsLCw5-prpkfWQYdW98JNVXa5rwiNPn0exARnNO4DstTTFfbUEYbQAcuhg9KDzmlTHDw__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA"
@@ -68,8 +79,8 @@ const ClassifiesProductsComponent = () => {
             price="300.98"
             location="Cape Hadstone"
           />
-        </CustomSlide>
-        <CustomSlide>
+        </SwiperSlide>
+        <SwiperSlide>
           <Card
             image={
               "https://s3-alpha-sig.figma.com/img/1f26/3dde/7b3c79a7ef682b1b875eb1700fa4da21?Expires=1655078400&Signature=NL03V7-kq969qe5x1WuYdE5UFSCj3csQsF1y-mpuxabjRl83SQj-pZ4qgEU10P2ZytJPdff9oHrsial74QBak0KWfieutOlmxFLp0miMPzGqtKAF5ST1si9b1helZfgnoN7oETHp7U7lnVTlTfynLN3UJKuf42PZ4Ik3Mst3nLEWOC1mN9iZu7dHSFsJ93N-CHsvza9sWzNdM1tYI-8vMK~RMphtWWeDgUEg9vxTqyuCVSaLFxUGE~aHM6fIDc6741pIx1GvOtKBRR2RnvvsLCw5-prpkfWQYdW98JNVXa5rwiNPn0exARnNO4DstTTFfbUEYbQAcuhg9KDzmlTHDw__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA"
@@ -79,8 +90,8 @@ const ClassifiesProductsComponent = () => {
             price="300.98"
             location="Cape Hadstone"
           />
-        </CustomSlide>
-        <CustomSlide>
+        </SwiperSlide>
+        <SwiperSlide>
           <Card
             image={
               "https://s3-alpha-sig.figma.com/img/1f26/3dde/7b3c79a7ef682b1b875eb1700fa4da21?Expires=1655078400&Signature=NL03V7-kq969qe5x1WuYdE5UFSCj3csQsF1y-mpuxabjRl83SQj-pZ4qgEU10P2ZytJPdff9oHrsial74QBak0KWfieutOlmxFLp0miMPzGqtKAF5ST1si9b1helZfgnoN7oETHp7U7lnVTlTfynLN3UJKuf42PZ4Ik3Mst3nLEWOC1mN9iZu7dHSFsJ93N-CHsvza9sWzNdM1tYI-8vMK~RMphtWWeDgUEg9vxTqyuCVSaLFxUGE~aHM6fIDc6741pIx1GvOtKBRR2RnvvsLCw5-prpkfWQYdW98JNVXa5rwiNPn0exARnNO4DstTTFfbUEYbQAcuhg9KDzmlTHDw__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA"
@@ -90,18 +101,7 @@ const ClassifiesProductsComponent = () => {
             price="300.98"
             location="Cape Hadstone"
           />
-        </CustomSlide>
-        <CustomSlide>
-          <Card
-            image={
-              "https://s3-alpha-sig.figma.com/img/1f26/3dde/7b3c79a7ef682b1b875eb1700fa4da21?Expires=1655078400&Signature=NL03V7-kq969qe5x1WuYdE5UFSCj3csQsF1y-mpuxabjRl83SQj-pZ4qgEU10P2ZytJPdff9oHrsial74QBak0KWfieutOlmxFLp0miMPzGqtKAF5ST1si9b1helZfgnoN7oETHp7U7lnVTlTfynLN3UJKuf42PZ4Ik3Mst3nLEWOC1mN9iZu7dHSFsJ93N-CHsvza9sWzNdM1tYI-8vMK~RMphtWWeDgUEg9vxTqyuCVSaLFxUGE~aHM6fIDc6741pIx1GvOtKBRR2RnvvsLCw5-prpkfWQYdW98JNVXa5rwiNPn0exARnNO4DstTTFfbUEYbQAcuhg9KDzmlTHDw__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA"
-            }
-            title="Holy Stone HS470
-            Foldable GPS RC Drone"
-            price="300.98"
-            location="Cape Hadstone"
-          />
-        </CustomSlide>
+        </SwiperSlide>
       </Slider>
     </Container>
   );
@@ -170,11 +170,9 @@ const ExploreButton = styled.button`
 
 const Slider = styled(Swiper)`
   display: flex;
-  align-items: center;
-  margin-left: 50px;
+  /* justify-content: center; */
+  padding: 0 10px;
 `;
-
-const CustomSlide = styled(SwiperSlide)``;
 
 const CardContainer = styled.div`
   width: 348px;
@@ -182,6 +180,7 @@ const CardContainer = styled.div`
   box-shadow: 0px 9px 26px rgba(0, 0, 0, 0.06);
   border-radius: 30px;
   background-color: ${({ theme }) => theme.secondaryBackgroundColor};
+  /* margin: 0 25px; */
 `;
 
 const CardImage = styled.img`
